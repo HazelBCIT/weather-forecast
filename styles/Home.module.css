@@ -1,21 +1,25 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  padding: 6rem;
+  padding: 1rem;
   min-height: 100vh;
+  font-family: 'Quicksand';
+  background-image: url("/background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 }
 
 .description a {
@@ -29,21 +33,22 @@
   position: relative;
   margin: 0;
   padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
 }
 
 .code {
   font-weight: 700;
-  font-family: var(--font-mono);
+  font-family: 'Poiret One';
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(6, minmax(15%, auto));
   width: var(--max-width);
   max-width: 100%;
+  align-items:center;
+  justify-content: center;
+  gap: 1rem;
+
 }
 
 .card {
@@ -77,7 +82,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 4rem 0;
+  padding-bottom: 2rem;
 }
 
 .center::before {
@@ -180,10 +185,14 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
     margin-bottom: 120px;
     max-width: 320px;
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(15%, auto));
+    width: var(--max-width);
+    max-width: 100%;
+
   }
 
   .card {
@@ -253,7 +262,10 @@
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(3, minmax(15%, auto));
+    width: var(--max-width);
+  max-width: 100%;
+
   }
 }
 
@@ -275,4 +287,30 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+
+.dataContainer {
+  /* background-image: url("/asset5.png"); */
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  padding:1em;
+  margin: 1rem;
+  text-align: center;
+  color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.day {
+  font-family: 'Leckerli One';
+  font-size: 26px;
+}
+
+.number {
+  font-size: 26px;
+  padding: 1em 0;
 }
