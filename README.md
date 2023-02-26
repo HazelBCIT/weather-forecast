@@ -5,7 +5,9 @@ This is a weather forecast website that can predict the weather in the next six 
 https://openweathermap.org/forecast5#list
 
 ## Coding language used
-Next Js
+Next.js 13, React
+HTML, CSS, JavaScript
+Axios
 
 ## Getting Started
 
